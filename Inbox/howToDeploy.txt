@@ -1,0 +1,110 @@
+All of the below commands should be executed in a new folder. If you do not want to make a new folder and go through the code, go to the notes below. I have all the files (compile.js, deploy.js .. ) are included in my project, you can copy them and use them in your folder and sub-folders.
+
+**********
+******
+NOTES:
+******
+
+If you are copying this project and trying to this file(this case represents your laziness in not wanting to read any of my given code and the explict explanation in each of the .js and .sol files), follow the notes below. 
+Note the following:-
+	1. You should have metamask extension on chrome. 
+	(Also Install Node JS)
+	2. Get some test ether from rinkeby faucet. 
+	3. You should have your 12 word key for your metamask account. 
+	4. Make an account on infura.io. Create a new project and copy the API key for rinkeby test network. 
+		3a. At this stage we want to run 'deploy.js' in terminal and deploy Inbox.sol's bytecode to the rinkeby test network. For this we need two arguments to be added in the provider (check deploy.js)	
+		3b. 
+			const provider = new HDwalletProvider(
+
+			'your 12 word metamask key should go here', // -> should be a random generated word sentence (pride tomorrow .. )
+			'your rinkeby API key from infura should go here' // ->  something like https://rinkeby.infura.io/v3/eb5a84d378c140... 
+		3c. Go to section G.
+	
+	5. Checkout section D.
+
+*********
+
+If you are making a new folder follow the sections below!
+
+Create a new folder (project folder) and name it Inbox.
+
+A1) npm init -> initiating npm and importing package.json (inside your project folder)
+
+A2) npm install --save solc -> solidity compiler (again inside your project folder)
+	Setting up contracts folder and putting your solidity file in it
+
+
+A3) Now, your project folder should have (Check my project folder)
+	1. contracts folder (all the .sol files go here eg. Inbox.sol) 
+		1a. Copy the .sol file in the contracts folder
+	2. test folder (should have testfiles to test .sol code eg. inbox.test.js)
+	Will have a inbox.test.js
+		2a. Copy the inbox.test.js file in the contracts folder
+	3. package.json()
+	4. compile.js (check the given file)
+	5. deploy.js()
+
+
+B) After configuring the compile.js (copy this from my project and go through it) you can check whether the solidity compiler is generating a byte code by adding this in compile.js
+	-> console.log(solc.compile(source,1));
+	And, then typing 'node compile.js' in terminal
+	1. We have to export the compiler objective 
+	-> module.exports = solc.compile(source,1).contracts['Inbox'];
+
+
+C) Next step would be to install ganche(personal ethereum blockchain) and a specefic version of web3 
+	npm install --save mocha ganache-cli web3@1.0.0-beta.26
+ in your project folder (Inbox for me)
+
+
+D) For testing (MOCHA TESTING FRAMEWORK)
+	 1. Go to package.json (in inbox) and in test under scripts write mocha
+	 2. Now, go to terminal and type 'npm run test' (You should be in Inbox directory)
+	 3. You can uncomment the 'Car class' code and try to run it using the above  command and see which tests are passed and which are not.
+	 4. There are several inbox.test_x.js files provided to play around with (in folder named other testing files. This folder also includes explanation for Mocha). Try some out by yourself by running the mocha testing framework on them 'npm run test'(you will have to copy them/or the code to folder test and change the name to inbox.test.js)
+
+
+E) To connect to any Ethereum network, we need a provider and also a connection to a node. The network can either be the main network or a test network. 
+	1. To get a provider for such types of network we need an API. 
+	2. Sign-up on 'infura.io'
+	3. Go to the main page and crate a new project.
+	4. On the left you col, you should see API key and API Secret with a default MAINNET end pont 
+	5. Note down the API key for the rinkby test network
+
+
+F) The next step would be to install a module that will help us connect to a provider.
+	1. In terminal, navigate to Inbox folder 
+	and type 
+	npm install --save truffle-hdwallet-provider
+	(Now see the deploy.js file)
+	2. run the deploy.js 
+	3. Type 'node deploy.js'
+
+G) You can check your deployed contract on rinkby.etherscan.io, by searching for the deployed contract and copying the contract hash displayed on the terminal. 
+	1. Contract deployed to 0xfc0................... 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
