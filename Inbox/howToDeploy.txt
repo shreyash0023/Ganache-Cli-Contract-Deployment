@@ -10,17 +10,18 @@ Note the following:-
 	1. You should have metamask extension on chrome. 
 	(Also Install Node JS)
 	2. Get some test ether from rinkeby faucet. 
-	3. You should have your 12 word key for your metamask account. 
-	4. Make an account on infura.io. Create a new project and copy the API key for rinkeby test network. 
-		3a. At this stage we want to run 'deploy.js' in terminal and deploy Inbox.sol's bytecode to the rinkeby test network. For this we need two arguments to be added in the provider (check deploy.js)	
-		3b. 
+	3. (Move on!)
+	4. You should have your 12 word key for your metamask account. 
+	5. Make an account on infura.io. Create a new project and copy the API key for rinkeby test network. 
+		5a. At this stage we want to run 'deploy.js' in terminal and deploy Inbox.sol's bytecode to the rinkeby test network. For this we need two arguments to be added in the provider (check deploy.js)	
+		5b. 
 			const provider = new HDwalletProvider(
 
 			'your 12 word metamask key should go here', // -> should be a random generated word sentence (pride tomorrow .. )
 			'your rinkeby API key from infura should go here' // ->  something like https://rinkeby.infura.io/v3/eb5a84d378c140... 
-		3c. Go to section G.
+		5c. Go to section G.
 	
-	5. Checkout section D.
+	6. Checkout section D.
 
 *********
 
