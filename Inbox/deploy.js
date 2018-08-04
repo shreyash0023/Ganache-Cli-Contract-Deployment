@@ -27,11 +27,6 @@ const { interface, bytecode } = require('./compile');
 
 // ** DO NOT CHANGE CODE BELOW THIS LINE
 
-const provider = new HDwalletProvider(
-
-	'script pride tomorrow patch dumb lend woman setup fluid balcony negative hint',
-	'https://rinkeby.infura.io/v3/eb5a84d378c1401287142b989f9f285c'
-);
 
 const web3 = new Web3(provider);
 let initialString = 'Hello World!';
