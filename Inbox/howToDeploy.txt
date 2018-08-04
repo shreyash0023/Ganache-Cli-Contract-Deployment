@@ -5,7 +5,7 @@ All of the below commands should be executed in a new folder. If you do not want
 NOTES:
 ******
 
-If you are copying this project and trying to this file(this case represents your laziness in not wanting to read any of my given code and the explict explanation in each of the .js and .sol files), follow the notes below. 
+If you are copying this project and trying to run this file(this case represents your laziness in not wanting to read any of my given code and the explict explanation in each of the .js and .sol files), follow the notes below. 
 Note the following:-
 	1. You should have metamask extension on chrome. 
 	(Also Install Node JS)
