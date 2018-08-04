@@ -40,7 +40,7 @@ A3) Now, your project folder should have (Check my project folder)
 		1a. Copy the .sol file in the contracts folder
 	2. test folder (should have testfiles to test .sol code eg. inbox.test.js)
 	Will have a inbox.test.js
-		2a. Copy the inbox.test.js file in the contracts folder
+		2a. Copy the inbox.test.js file in the test folder
 	3. package.json()
 	4. compile.js (check the given file)
 	5. deploy.js()
@@ -69,8 +69,8 @@ E) To connect to any Ethereum network, we need a provider and also a connection 
 	1. To get a provider for such types of network we need an API. 
 	2. Sign-up on 'infura.io'
 	3. Go to the main page and crate a new project.
-	4. On the left you col, you should see API key and API Secret with a default MAINNET end pont 
-	5. Note down the API key for the rinkby test network
+	4. On the left col, you should see API key and API Secret with a default MAINNET end pont 
+	5. Note down the API key for the rinkeby test network
 
 
 F) The next step would be to install a module that will help us connect to a provider.
@@ -82,7 +82,7 @@ F) The next step would be to install a module that will help us connect to a pro
 	3. Type 'node deploy.js'
 
 G) You can check your deployed contract on rinkby.etherscan.io, by searching for the deployed contract and copying the contract hash displayed on the terminal. 
-	1. Contract deployed to 0xfc0................... 
+	1. Contract deployed to 0xfc0................... (Copy this hash)
 
 
 
