@@ -21,54 +21,7 @@ const web3 = new Web3(provider);  // Whenever we do an instance of web3 we have 
 // a provider() can be thought of as a communication layer b/w web3 lib and some specific ethereum network 
 // web3 is always going to expect you to provide a provider
 
-/*
-	*************
-	MOCHA TESTING
-	*************
-*/
 
-// MOCHA WORKING : A test running framework. Any type of javascript code we want to test, front, back or an ethereum code! (General purpose testqng framework)
-
-
-// There are three functions we need to be aware of 
-
-// 1.  it(a string, () => { }) -> run a test and make an assertion
-// 2.  describe(a string, () => { it(a string, () => {}) }) -> group together a collection of it 
-// 3.  beforeEach() -> utility fucntion used to extract some amount of logic (only							 write that code out one time) (runs before every 'it' block)
-
-/*
-class Car{
-	park()
-	{
-		return 'stopped';
-	}
-
-	drive()
-	{
-		return 'vroom';
-	}
-}
-let car;
-beforeEach(() => {
-	car = new Car();
-});
-
-describe('Car', () =>
-{
-	it('Can park', () =>
-	{
-		//const car = new Car(); (If we do not add the before each function)
-		assert.equal(car.park(),'stopped');
-	});
-
-	it('Can drive', () =>{
-		//const car = new Car(); (If we do not add the before each function)
-		assert.equal(car.drive(),'vroom');
-	});
-
-});
-
-*/	
 
 /*
 	******************************************************************
